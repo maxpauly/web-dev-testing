@@ -1,0 +1,10 @@
+:root {
+    --border-radius: 5px;
+    --box-shadow-raised: 0px 1px 6px 0px var(--color-shadow);
+}
+
+.card {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-raised);
+    padding: var(--space-md);    
+}

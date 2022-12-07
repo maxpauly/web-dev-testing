@@ -1,0 +1,119 @@
+/* Inspiration drawn from:
+ * https://medium.com/codyhouse/create-your-design-system-part-3-colors-798e4729921f
+ * https://material.io/design/color/the-color-system.html#color-theme-creation
+ * https://web.dev/building-a-color-scheme/
+ */
+
+:root {
+    /* Neutral colors generated via chroma.js: 
+     * https://gka.github.io/palettes/#/8|s|111111,ffffff|ffffe0,ff005e,93003a|1|1
+     */
+    --color-black: hsl(0, 0%, 7%); /* #111111 */
+    --color-gray-1: hsl(0, 0%, 18%); /* #2d2d2d */
+    --color-gray-2: hsl(0, 0%, 30%); /* #4c4c4c */
+    --color-gray-3: hsl(0, 0%, 42%); /* #6c6c6c */
+    --color-gray-4: hsl(0, 0%, 56%); /* #8f8f8f */
+    --color-gray-5: hsl(0, 0%, 70%); /* #b3b3b3 */
+    --color-gray-6: hsl(0, 0%, 85%); /* #d8d8d8 */
+    --color-white: hsl(0, 0%, 100%); /* #ffffff */
+
+
+    /* Surface colors */
+    
+    --color-surface-1: var(--color-white);
+    --color-surface-2: var(--color-gray-6);
+    --color-surface-3: var(--color-gray-1);
+    --color-surface-4: var(--color-black);
+
+    --color-surface-1-hover: var(--color-gray-6);
+    --color-surface-2-hover: var(--color-gray-5);
+    --color-surface-3-hover: var(--color-gray-2);
+    --color-surface-4-hover: var(--color-gray-1);
+
+    --color-surface-1-text: var(--color-gray-1);
+    --color-surface-2-text: var(--color-black);
+    --color-surface-3-text: var(--color-white);
+    --color-surface-4-text: var(--color-gray-6);
+
+
+    /* Brand color */
+
+    --color-brand-hue: 355;
+    --color-brand-saturation: 79%;
+    --color-brand-lightness: 50%;
+    --color-brand-variance: 0.1; /* Between 0 and 1 */
+
+    --color-brand: hsl(var(--color-brand-hue) var(--color-brand-saturation) var(--color-brand-lightness));
+    --color-brand-light: hsl(var(--color-brand-hue) var(--color-brand-saturation) calc(var(--color-brand-lightness) * (1 + var(--color-brand-variance))));
+    --color-brand-dark: hsl(var(--color-brand-hue) var(--color-brand-saturation) calc(var(--color-brand-lightness) * (1 - var(--color-brand-variance))));
+
+    --color-brand-text: var(--color-white); /* Note: not AAA compliant for small, unbolded text */
+
+    --color-brand-hover: var(--color-brand-dark);
+
+
+    /* Accent color */
+
+    --color-accent-hue: 197;
+    --color-accent-saturation: 100%;
+    --color-accent-lightness: 43%;
+    --color-accent-variance: 0.1; /* Between 0 and 1 */
+
+    --color-accent: hsl(var(--color-accent-hue) var(--color-accent-saturation) var(--color-accent-lightness));
+    --color-accent-light: hsl(var(--color-accent-hue) var(--color-accent-saturation) calc(var(--color-accent-lightness) * (1 + var(--color-accent-variance))));
+    --color-accent-dark: hsl(var(--color-accent-hue) var(--color-accent-saturation) calc(var(--color-accent-lightness) * (1 - var(--color-accent-variance))));
+
+    --color-accent-text: var(--color-black); /* Note: not AAA compliant for small, unbolded text */
+
+    --color-accent-hover: var(--color-accent-dark);
+
+
+    /* Utility colors */
+
+    --color-success: hsl(94, 48%, 56%);
+    --color-error: hsl(12, 90%, 61%);
+
+    --color-focus: hsl(51, 100%, 60%);
+
+    --color-shadow: var(--color-black);
+}
+
+.surface-1 {
+    --color-hover: var(--color-surface-1-hover);
+    background-color: var(--color-surface-1);
+    color: var(--color-surface-1-text);
+}
+
+.surface-2 {
+    --color-hover: var(--color-surface-2-hover);
+    background-color: var(--color-surface-2);
+    color: var(--color-surface-2-text);
+}
+
+.surface-3 {
+    --color-hover: var(--color-surface-3-hover);
+    background-color: var(--color-surface-3);
+    color: var(--color-surface-3-text);
+}
+
+.surface-4 {
+    --color-hover: var(--color-surface-4-hover);
+    background-color: var(--color-surface-4);
+    color: var(--color-surface-4-text);
+}
+
+.brand {
+    --color-hover: var(--color-brand-hover);
+    background-color: var(--color-brand);
+    color: var(--color-brand-text);
+}
+
+.accent {
+    --color-hover: var(--color-accent-hover);
+    background-color: var(--color-accent);
+    color: var(--color-accent-text);
+}
+
+.hoverable:hover {
+    background-color: var(--color-hover);
+}

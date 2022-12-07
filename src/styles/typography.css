@@ -1,0 +1,53 @@
+:root {
+    --line-height: 1.5; /* https://www.w3.org/TR/WCAG21/#visual-presentation */
+
+    --font: sans-serif;
+    --font-weight-normal: 500;
+    --font-weight-bold: 700;
+
+    /* set base values */
+    --text-scale-ratio: 1.2;
+    --text-base-size: 1rem;
+
+    /* type scale */
+    --text-md:      var(--text-base-size);
+
+    --text-sm:      calc(var(--text-md) / var(--text-scale-ratio));
+    --text-xs:      calc(var(--text-sm) / var(--text-scale-ratio));
+
+    --text-lg:      calc(var(--text-md) * var(--text-scale-ratio));
+    --text-xl:      calc(var(--text-lg) * var(--text-scale-ratio));
+    --text-xxl:     calc(var(--text-xl) * var(--text-scale-ratio));
+    --text-xxxl:    calc(var(--text-xxl) * var(--text-scale-ratio));
+}
+
+
+/* Utility classes */
+
+.text-xxxl {
+    font-size: var(--text-xxxl);
+}
+
+.text-xxl {
+    font-size: var(--text-xxl);
+}
+
+.text-xl {
+    font-size: var(--text-xl);
+}
+
+.text-lg {
+    font-size: var(--text-lg);
+}
+
+.text-md {
+    font-size: var(--text-md);
+}
+
+.text-sm {
+    font-size: var(--text-sm);
+}
+
+.text-xs {
+    font-size: var(--text-xs);
+}
